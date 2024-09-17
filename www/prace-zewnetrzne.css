@@ -1,0 +1,57 @@
+
+.inside-icon
+{
+    background-image: url("img/png/outsite.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    
+}
+main>section>header>h1
+{
+    line-height: 62px;
+    font-size: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 0 0 80px;
+
+}
+main>section>.photo
+{
+    width: 100%;
+    height: 400px;
+    clear: both;
+    background-image: url("img/mphotos/prace%20zew.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+}
+main>section>article
+{
+    position: relative;
+    top:-50px;
+}
+
+main>section
+{
+    width: 850px;
+    margin: 0;
+    display: inline-block;
+    padding-right: 80px;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+main>section>article
+{
+    margin-top: 80px;
+}
+article>ul>li
+{
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+
+
+
