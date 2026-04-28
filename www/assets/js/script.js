@@ -7,10 +7,21 @@ menuButton?.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', String(isOpen));
 });
 
-document.querySelectorAll('.nav-menu a').forEach(link => {
+// Na mobile klik w "Oferta" rozwija dropdown zamiast nawigować
+document.querySelectorAll('.nav-item > a').forEach(link => {
+  link.addEventListener('click', e => {
+    if (menuButton && getComputedStyle(menuButton).display !== 'none') {
+      e.preventDefault();
+      link.closest('.nav-item').classList.toggle('dropdown-open');
+    }
+  });
+});
+
+document.querySelectorAll('.nav-menu a:not(.nav-item > a)').forEach(link => {
   link.addEventListener('click', () => {
     menu?.classList.remove('open');
     menuButton?.setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('dropdown-open'));
   });
 });
 
